@@ -3,12 +3,16 @@ import React, { useState } from "react";
 const Questionamento = () => {
   const [showMore, setShowMore] = useState(false);
   const [question, setQuestion] = useState(false);
+  const [confirm, setConfirm] = useState(false);
 
   const handleShowImage = () => {
     setShowMore(true);
   };
   const startQuestion = () => {
     setQuestion(true);
+  };
+  const Confirm = () => {
+    setConfirm(true);
   };
 
   return (
@@ -41,6 +45,14 @@ const Questionamento = () => {
             <div className="question">
               <p>ESTA CANALHA, É PUTA OU NÃO É?</p>
               <img className="img" src="/img/velha.jpg"></img>
+              <button onClick={Confirm}>SIM</button>
+              <button onClick={Confirm}>CLARO</button>
+              {confirm && (
+                <div className="confirm">
+                  <h1>Parabens você acertou!!</h1>
+                  <h3>Esta canalha é uma putona</h3>
+                </div>
+              )}
             </div>
           )}
         </div>
