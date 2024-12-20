@@ -38,7 +38,7 @@ const Questionamento = () => {
           <p>Abaixo um botão para iniciar</p>
           <button onClick={startQuestion}>Questão</button>
           {question && (
-            <div clasName="question">
+            <div className="question">
               <p>ESTA CANALHA, É PUTA OU NÃO É?</p>
               <img className="img" src="/img/velha.jpg"></img>
             </div>
