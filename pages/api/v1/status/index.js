@@ -25,7 +25,7 @@ async function status(req, res) {
     dependencies: {
       database: {
         version: databaseVersionValue,
-        max_connections: databaseMaxConnectionsValue,
+        max_connections: Number(databaseMaxConnectionsValue),
         used_connections: databaseUsedConnectionsValue,
       },
     },
